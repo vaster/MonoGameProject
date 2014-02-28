@@ -74,7 +74,7 @@ namespace SpaceInvaders
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+			//TODO: Sasho
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
