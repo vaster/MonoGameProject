@@ -1,0 +1,1 @@
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoaderContent\obj\PSM\SpritesLoaderContent.contentprojResolveAssemblyReference.cache
