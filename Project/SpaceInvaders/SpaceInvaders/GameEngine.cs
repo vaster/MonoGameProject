@@ -30,7 +30,7 @@ namespace SpaceInvaders
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+			// TODO : Vasil
             base.Initialize();
         }
 
