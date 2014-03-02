@@ -2,7 +2,8 @@ namespace SpaceInvaders
 {
     using System.Collections.Generic;
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;    
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
 
     /// <summary>
     /// This is the main type for your game
@@ -12,13 +13,13 @@ namespace SpaceInvaders
         GraphicsDeviceManager _graphics;
         SpriteBatch _spriteBatch;
 
-        private List<Enemy> enemies;
-        private Player player;
+        private IList<Enemy> enemies;
+        private Player player = new Player();
 
         public GameEngine()
         {
             _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            Content.RootDirectory = "Resources";
         }
 
         /// <summary>
@@ -30,7 +31,14 @@ namespace SpaceInvaders
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-			// TODO : Vasil
+            // Initialization of the screen sizes
+            Hub.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
+            Hub.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
+
+            // This initialization is not necessary because the player have empty constructor. 
+            // It's used for setting the start position of the player.
+            player.Initialize();
+
             base.Initialize();
         }
 
@@ -42,7 +50,8 @@ namespace SpaceInvaders
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            
+            player.Texture = Content.Load<Texture2D>(player.SpritePath);           
             // TODO: use this.Content to load your game content here
         }
 
@@ -63,6 +72,7 @@ namespace SpaceInvaders
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -76,7 +86,11 @@ namespace SpaceInvaders
             GraphicsDevice.Clear(Color.CornflowerBlue);
 			//TODO: Sasho
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
 
+            _spriteBatch.Draw(player.Texture, player.Position, Color.White);
+
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }

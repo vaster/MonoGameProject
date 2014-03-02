@@ -5,3 +5,4 @@ Assets\StoreLogo.png
 App.xaml
 Common\StandardStyles.xaml
 GamePage.xaml
+Resources\PlayerSprite\PlayerShip.xnb

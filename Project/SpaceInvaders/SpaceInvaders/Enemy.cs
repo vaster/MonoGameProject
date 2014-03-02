@@ -1,5 +1,8 @@
 ﻿namespace SpaceInvaders
 {
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics; 
+
     public class Enemy : GameObject, IMovable
     {
         public float SpeedX

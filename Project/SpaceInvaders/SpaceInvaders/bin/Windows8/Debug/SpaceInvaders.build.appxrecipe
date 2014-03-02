@@ -43,6 +43,9 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MSBuild\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.XInput.dll">
       <PackagePath>SharpDX.XInput.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\PlayerSprite\PlayerShip.xnb">
+      <PackagePath>Resources\PlayerSprite\PlayerShip.xnb</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

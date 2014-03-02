@@ -148,7 +148,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Resources\PlayerSprite\PlayerShip.xnb" />
+    <Content Include="Resources\PlayerSprite\PlayerShip.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="SpaceInvaders_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
