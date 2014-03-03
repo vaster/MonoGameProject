@@ -1,1 +1,1 @@
-C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\SpaceInvaders.csproj;neutral
+C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpaceInvaders\SpaceInvaders.csproj;neutral

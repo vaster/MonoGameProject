@@ -17,7 +17,7 @@
 
         public override void Initialize()
         {
-            // To change magic numbers with constants
+            // To do: change the magic numbers with constants
             this.SpeedX = 5.0f;
             this.SpeedY = 0.0f;
             this.Height = 120; // To do...
@@ -29,6 +29,7 @@
         public override void Update()
         {
             CheckForPressedKey();
+            CheckPlayerScreenPosition();
         }
 
         public override void Draw()
@@ -36,7 +37,7 @@
             throw new System.NotImplementedException();
         }
 
-        public void CheckForPressedKey()
+        private void CheckForPressedKey()
         {
             // Checks if left arrow key or right arrow key is pressed
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
@@ -47,7 +48,10 @@
             {
                 this.PositionX += this.SpeedX;
             }
+        }
 
+        private void CheckPlayerScreenPosition()
+        {
             // Checks whether the player has left the screen or not
             if (this.Position.X > Hub.ScreenWidth)
             {

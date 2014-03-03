@@ -92,3 +92,4 @@ C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\Space
 C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\LanguageQualifiers.txt
 C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\ProjectArchitectures.txt
 C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Resources\PlayerSprite\PlayerShip.xnb
+C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Resources\PlayerSprite\PlayerShip.xnb
