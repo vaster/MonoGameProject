@@ -6,9 +6,29 @@
 
     public abstract class GameObject 
     {
-        public Texture2D Texture { get; set; }
+        private Vector2 position;
 
-        public Vector2 Position { get; set; }
+        public string SpritePath { get; set; }
+
+        public Texture2D Texture { get; set; }        
+
+        public Vector2 Position 
+        { 
+            get { return this.position; }
+            set { this.position = value; }
+        }
+
+        public float PositionX
+        {
+            get { return position.X; }
+            set { position.X = value; }
+        }
+
+        public float PositionY
+        {
+            get { return position.Y; }
+            set { position.Y = value; }
+        }
 
         public int Width { get; set; }
 
@@ -16,7 +36,7 @@
 
         public IEnumerable<int> CanCollideWith { get; set; }
 
-        public abstract void Initialize();        
+        public abstract void Initialize();
 
         public abstract void Update();
 

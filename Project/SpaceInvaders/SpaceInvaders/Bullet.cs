@@ -1,5 +1,8 @@
 ﻿namespace SpaceInvaders
 {
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics; 
+
     public class Bullet : GameObject
     {
         public override void Initialize()
@@ -15,6 +18,6 @@
         public override void Draw()
         {
             throw new System.NotImplementedException();
-        }
+        }        
     }
 }
