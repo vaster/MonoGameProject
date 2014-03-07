@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.exe">
       <PackagePath>SpaceInvaders.exe</PackagePath>
-      <Modified>2014-03-03T13:51:50.732</Modified>
+      <Modified>2014-03-03T13:54:09.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.pdb">
       <PackagePath>SpaceInvaders.pdb</PackagePath>
-      <Modified>2014-03-03T13:51:50.713</Modified>
+      <Modified>2014-03-03T13:54:09.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MSBuild\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll">
       <PackagePath>MonoGame.Framework.dll</PackagePath>
