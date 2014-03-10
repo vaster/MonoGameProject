@@ -36,10 +36,8 @@
 
         public IEnumerable<int> CanCollideWith { get; set; }
 
-        public abstract void Initialize();
-
         public abstract void Update();
 
-        public abstract void Draw();
+        public abstract void Draw(SpriteBatch srpiteBatch);
     }
 }
