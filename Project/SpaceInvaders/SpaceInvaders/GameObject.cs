@@ -35,9 +35,9 @@
         public int Height { get; set; }
 
         public IEnumerable<int> CanCollideWith { get; set; }
-
+        
         public abstract void Update();
 
-        public abstract void Draw(SpriteBatch srpiteBatch);
+        public abstract void Draw(SpriteBatch spriteBatch);
     }
 }

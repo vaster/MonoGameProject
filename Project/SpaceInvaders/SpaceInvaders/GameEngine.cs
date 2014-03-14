@@ -1,9 +1,10 @@
 namespace SpaceInvaders
 {
+    using System;
     using System.Collections.Generic;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-    using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework.Input;    
 
     /// <summary>
     /// This is the main type for your game
@@ -15,6 +16,7 @@ namespace SpaceInvaders
 
         private IList<Enemy> enemies;
         private Player player = new Player();
+        private IList<Bullet> bullets = new List<Bullet>();
 
         public GameEngine()
         {
@@ -36,8 +38,7 @@ namespace SpaceInvaders
             Hub.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
 
             // This initialization is not necessary because the player have empty constructor. 
-            // It's used for setting the start position of the player.
-            player.Initialize();
+            // It's used for setting the start position of the player.            
 
             base.Initialize();
         }
@@ -51,8 +52,9 @@ namespace SpaceInvaders
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             
-            player.Texture = Content.Load<Texture2D>(player.SpritePath);           
-            // TODO: use this.Content to load your game content here
+            player.Texture = Content.Load<Texture2D>(player.SpritePath);
+            var bulletTexture = Content.Load<Texture2D>(player.PlayerWeapon.WeaponBullet.SpritePath);
+            player.PlayerWeapon.WeaponBullet.Texture = bulletTexture;            
         }
 
         /// <summary>
@@ -72,7 +74,22 @@ namespace SpaceInvaders
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
+            TimeSpan elapsedTime = TimeSpan.FromMilliseconds(500);
+            //elapsedTime += gameTime.ElapsedGameTime;
+            gameTime.ElapsedGameTime += elapsedTime;
             player.Update();
+
+            var bullet = player.Shot();
+            if (bullet != null)
+            {
+                bullets.Add(bullet);
+            }
+
+            foreach (var bul in bullets)
+            {
+                //gameTime.ElapsedGameTime = TimeSpan.FromMilliseconds(500);
+                bul.Update();
+            }
 
             base.Update(gameTime);
         }
@@ -83,12 +100,17 @@ namespace SpaceInvaders
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-			//TODO: Sasho
+            GraphicsDevice.Clear(Color.CornflowerBlue);			
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(player.Texture, player.Position, Color.White);
+            player.Draw(_spriteBatch);
+            
+            foreach (var bullet in bullets)
+            {
+                bullet.Draw(_spriteBatch);
+            }
+            
 
             _spriteBatch.End();
             base.Draw(gameTime);

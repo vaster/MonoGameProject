@@ -1,23 +1,40 @@
 ﻿namespace SpaceInvaders
 {
+    using System;
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics; 
+    using Microsoft.Xna.Framework.Graphics;     
 
     public class Bullet : GameObject
     {
-        public override void Initialize()
+        public Bullet() 
         {
-            throw new System.NotImplementedException();
+            this.Height = UnitInitialData.BulletHeight;
+            this.Width = UnitInitialData.BulletWidth;
+        }
+
+        public Bullet(string spritePath, Vector2 position)
+            : this()
+        {
+            this.Position = position;
+            this.SpritePath = spritePath;
+            
+        }
+
+        public Bullet(Texture2D texture, Vector2 position)
+            : this()
+        {
+            this.Position = position;
+            this.Texture = texture;
         }
 
         public override void Update()
         {
-            throw new System.NotImplementedException();
+            this.PositionY -= UnitInitialData.BulletSpeed;
         }
 
-        public override void Draw()
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            throw new System.NotImplementedException();
+            spriteBatch.Draw(this.Texture, this.Position, Color.White);
         }        
     }
 }

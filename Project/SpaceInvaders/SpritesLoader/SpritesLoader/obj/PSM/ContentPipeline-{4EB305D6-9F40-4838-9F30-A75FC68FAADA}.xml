@@ -7,8 +7,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\PlayerShip.xnb</Output>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\PlayerShip.xnb</Output>
       <Time>2014-03-01T00:00:31.5002698+02:00</Time>
+    </Item>
+    <Item>
+      <Source>LaserRedBullet.png</Source>
+      <Name>LaserRedBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedBullet.xnb</Output>
+      <Time>2014-03-08T15:50:22.2382074+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +26,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>PSM</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoaderContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\obj\PSM\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoaderContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\obj\PSM\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
