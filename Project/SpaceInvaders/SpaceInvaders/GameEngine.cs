@@ -17,6 +17,8 @@ namespace SpaceInvaders
         private IList<Enemy> enemies;
         private Player player = new Player();
         private IList<Bullet> bullets = new List<Bullet>();
+        // To do: try to make exploded bullet internal of the future class for the collisions
+        private ExplodedBullet explodedBullet = new ExplodedBullet();
 
         public GameEngine()
         {
@@ -37,8 +39,8 @@ namespace SpaceInvaders
             Hub.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
             Hub.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
 
-            // This initialization is not necessary because the player have empty constructor. 
-            // It's used for setting the start position of the player.            
+            // This initialization is not necessary because the player have empty constructor 
+            // It's used for setting the start position of the player           
 
             base.Initialize();
         }
@@ -49,12 +51,16 @@ namespace SpaceInvaders
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
+            // Create a new SpriteBatch, which can be used to draw textures
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            
-            player.Texture = Content.Load<Texture2D>(player.SpritePath);
-            var bulletTexture = Content.Load<Texture2D>(player.PlayerWeapon.WeaponBullet.SpritePath);
-            player.PlayerWeapon.WeaponBullet.Texture = bulletTexture;            
+
+            this.player.Texture = Content.Load<Texture2D>(this.player.SpritePath);
+            var bulletTexture = Content.Load<Texture2D>(this.player.PlayerWeapon.WeaponBullet.SpritePath);
+            this.player.PlayerWeapon.WeaponBullet.Texture = bulletTexture;
+
+            // To do: it is only with test purpose
+            var explodedBulletTexture = Content.Load<Texture2D>("Bullets\\LaserRedShot");
+            this.explodedBullet.Texture = explodedBulletTexture;
         }
 
         /// <summary>
@@ -73,22 +79,18 @@ namespace SpaceInvaders
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // TODO: Add your update logic here
-            TimeSpan elapsedTime = TimeSpan.FromMilliseconds(500);
-            //elapsedTime += gameTime.ElapsedGameTime;
-            gameTime.ElapsedGameTime += elapsedTime;
-            player.Update();
+            // TODO: Add your update logic here            
+            this.player.Update(gameTime);
 
-            var bullet = player.Shot();
-            if (bullet != null)
+            var playerBullet = this.player.Shot();
+            if (playerBullet != null)
             {
-                bullets.Add(bullet);
+                this.bullets.Add(playerBullet);
             }
 
-            foreach (var bul in bullets)
+            foreach (var bullet in this.bullets)
             {
-                //gameTime.ElapsedGameTime = TimeSpan.FromMilliseconds(500);
-                bul.Update();
+                bullet.Update(gameTime);
             }
 
             base.Update(gameTime);
@@ -104,13 +106,14 @@ namespace SpaceInvaders
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            player.Draw(_spriteBatch);
+            this.player.Draw(_spriteBatch);
             
-            foreach (var bullet in bullets)
+            foreach (var bullet in this.bullets)
             {
                 bullet.Draw(_spriteBatch);
             }
-            
+
+            this.explodedBullet.Draw(_spriteBatch);
 
             _spriteBatch.End();
             base.Draw(gameTime);

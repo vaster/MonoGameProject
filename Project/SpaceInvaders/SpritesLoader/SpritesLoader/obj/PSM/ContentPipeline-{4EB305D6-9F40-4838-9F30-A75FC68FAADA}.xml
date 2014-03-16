@@ -19,6 +19,15 @@
       <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedBullet.xnb</Output>
       <Time>2014-03-08T15:50:22.2382074+02:00</Time>
     </Item>
+    <Item>
+      <Source>LaserRedShot.png</Source>
+      <Name>LaserRedShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedShot.xnb</Output>
+      <Time>2014-03-16T10:38:48.4196825+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4EB305D6-9F40-4838-9F30-A75FC68FAADA}</ContentProjectGUID>

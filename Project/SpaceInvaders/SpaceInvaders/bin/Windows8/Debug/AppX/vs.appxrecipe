@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-08T14:49:48.492</Modified>
+      <Modified>2014-03-16T09:35:34.018</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.exe">
       <PackagePath>SpaceInvaders.exe</PackagePath>
-      <Modified>2014-03-14T00:00:57.238</Modified>
+      <Modified>2014-03-16T09:35:33.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.pdb">
       <PackagePath>SpaceInvaders.pdb</PackagePath>
-      <Modified>2014-03-14T00:00:57.223</Modified>
+      <Modified>2014-03-16T09:35:33.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MSBuild\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll">
       <PackagePath>MonoGame.Framework.dll</PackagePath>
@@ -68,6 +68,10 @@
       <PackagePath>Resources\Bullets\LaserRedBullet.xnb</PackagePath>
       <Modified>2014-03-08T14:06:28.223</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\Bullets\LaserRedShot.xnb">
+      <PackagePath>Resources\Bullets\LaserRedShot.xnb</PackagePath>
+      <Modified>2014-03-16T08:39:35.746</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -102,7 +106,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-03-11T21:48:43.192</Modified>
+      <Modified>2014-03-16T09:13:39.698</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

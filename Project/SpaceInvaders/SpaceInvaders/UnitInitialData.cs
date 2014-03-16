@@ -1,5 +1,7 @@
 ﻿namespace SpaceInvaders
 {
+    using System;
+
     public static class UnitInitialData
     {
         public const float PlayerPositionX = 1366 / 1.9f;
@@ -10,6 +12,9 @@
         public const float PlayerSpeedY = 0.0f;
         public const int BulletHeight = 33;
         public const int BulletWidth = 9;
-        public const float BulletSpeed = 5.0f;        
+        public const float BulletSpeed = 5.0f;
+        public const int ExplodedBulletHeight = 56;
+        public const int ExplodedBulletWidth = 54;
+        public static TimeSpan DelayBetweenShotsMillisecond = new TimeSpan(0, 0, 0, 0, 150);
     }
 }

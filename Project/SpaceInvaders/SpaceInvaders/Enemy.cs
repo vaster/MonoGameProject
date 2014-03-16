@@ -29,7 +29,7 @@
             }
         }
 
-        public override void Update()
+        public override void Update(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
@@ -37,6 +37,6 @@
         public override void Draw(SpriteBatch spriteBatch)
         {
             throw new System.NotImplementedException();
-        }
+        }        
     }
 }

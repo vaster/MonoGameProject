@@ -1,2 +1,3 @@
 Content\PlayerShip.xnb
 Content\LaserRedBullet.xnb
+Content\LaserRedShot.xnb

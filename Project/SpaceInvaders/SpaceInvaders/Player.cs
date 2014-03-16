@@ -10,7 +10,8 @@
     public class Player : GameObject, IMovable
     {
         private Weapon weapon;
-        private bool isTimeForFire = false;
+        private bool isFireKeyPress = false;
+        private TimeSpan isTimeForFire;
 
         public float SpeedX { get; set; }
 
@@ -25,17 +26,18 @@
             this.Width = UnitInitialData.PlayerWidth;
             this.Position = new Vector2(UnitInitialData.PlayerPositionX, UnitInitialData.PlayerPositionY);
             this.SpritePath = "PlayerSprite\\PlayerShip";
-            this.weapon = new Weapon(new Bullet("Bullets\\LaserRedBullet", this.Position));
+            this.PlayerWeapon = new Weapon(new Bullet("Bullets\\LaserRedBullet", this.Position));
         }
 
         public Weapon PlayerWeapon
         {
             get { return this.weapon; }
+            private set { this.weapon = value; } 
         }
 
         public Bullet Shot()
         {
-            if (this.PlayerWeapon.WeaponBullet.Texture != null && isTimeForFire)
+            if (this.PlayerWeapon.WeaponBullet.Texture != null && isFireKeyPress)
             {
                 var bulletPosition = new Vector2(this.PositionX + this.Width / 2 - UnitInitialData.BulletWidth / 2,
                                                 this.PositionY - UnitInitialData.BulletHeight / 2);
@@ -46,34 +48,27 @@
             return null;
         }
 
-        public override void Update()
+
+        public override void Update(GameTime gameTime)
         {
-            isTimeForFire = false;
-            if (CheckForPressedFireKey())
+            // Logic for the delay between shots (To do: to put out the whole logic in a separate function)
+            this.isFireKeyPress = false;
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && gameTime.TotalGameTime > this.isTimeForFire)
             {
-                isTimeForFire = true;                                
+                this.isTimeForFire = gameTime.TotalGameTime + UnitInitialData.DelayBetweenShotsMillisecond;
+                this.isFireKeyPress = true;
             }
 
-            CheckForPressedKey();
+            CheckForPressedMoveKey();
             CheckPlayerScreenPosition();
         }
-
-        private bool CheckForPressedFireKey()
-        {
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-            {
-                return true;                
-            }
-
-            return false;
-        }
-
+        
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(this.Texture, this.Position, Color.White);
         }
 
-        private void CheckForPressedKey()
+        private void CheckForPressedMoveKey()
         {
             // Checks if left arrow key or right arrow key is pressed
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
@@ -84,7 +79,7 @@
             {
                 this.PositionX += this.SpeedX;
             }
-        }
+        }             
 
         private void CheckPlayerScreenPosition()
         {

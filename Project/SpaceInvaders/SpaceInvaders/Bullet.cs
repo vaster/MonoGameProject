@@ -27,7 +27,9 @@
             this.Texture = texture;
         }
 
-        public override void Update()
+        public bool IsExploded { get; set; }
+
+        public override void Update(GameTime gameTime)
         {
             this.PositionY -= UnitInitialData.BulletSpeed;
         }
@@ -35,6 +37,6 @@
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(this.Texture, this.Position, Color.White);
-        }        
+        }
     }
 }

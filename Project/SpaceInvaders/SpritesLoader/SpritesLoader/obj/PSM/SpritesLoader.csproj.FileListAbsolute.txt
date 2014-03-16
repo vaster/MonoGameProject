@@ -10,3 +10,4 @@ C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesL
 C:\Users\Aleksandar\Documents\visual studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\obj\PSM\IgnoreMe.dll
 C:\Users\Aleksandar\Documents\Visual Studio 2012\MonoGame\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedBullet.xnb
 C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedBullet.xnb
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedShot.xnb

@@ -4,8 +4,8 @@
     using Microsoft.Xna.Framework.Graphics; 
 
     public class Item : GameObject
-    {        
-        public override void Update()
+    { 
+        public override void Update(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }

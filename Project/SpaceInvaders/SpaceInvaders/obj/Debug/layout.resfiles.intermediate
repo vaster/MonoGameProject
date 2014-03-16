@@ -6,4 +6,5 @@ App.xaml
 Common\StandardStyles.xaml
 GamePage.xaml
 Resources\Bullets\LaserRedBullet.xnb
+Resources\Bullets\LaserRedShot.xnb
 Resources\PlayerSprite\PlayerShip.xnb
