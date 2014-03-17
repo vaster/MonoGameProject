@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -138,7 +139,7 @@
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameEngine.cs" />
-    <Compile Include="Hub.cs" />
+    <Compile Include="Hud.cs" />
     <Compile Include="ICollidable.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="Item.cs" />

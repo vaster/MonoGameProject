@@ -16,5 +16,12 @@
         public const int ExplodedBulletHeight = 56;
         public const int ExplodedBulletWidth = 54;
         public static TimeSpan DelayBetweenShotsMillisecond = new TimeSpan(0, 0, 0, 0, 150);
+
+        public const int EnemiesCount = 30;
+        public const int EnemyPacks = 3;
+        public const float EnemySpeedX =60 ;
+        public const float EnemySpeedY = 10f;
+        public const int EnemyHeight = 120;
+        public const int EnemyWidth = 120;
     }
 }

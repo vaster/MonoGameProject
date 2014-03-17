@@ -4,7 +4,7 @@ namespace SpaceInvaders
     using System.Collections.Generic;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-    using Microsoft.Xna.Framework.Input;    
+    using Microsoft.Xna.Framework.Input;
 
     /// <summary>
     /// This is the main type for your game
@@ -36,8 +36,8 @@ namespace SpaceInvaders
         {
             // TODO: Add your initialization logic here
             // Initialization of the screen sizes
-            Hub.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
-            Hub.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
+            Hud.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
+            Hud.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
 
             // This initialization is not necessary because the player have empty constructor 
             // It's used for setting the start position of the player           
@@ -61,6 +61,8 @@ namespace SpaceInvaders
             // To do: it is only with test purpose
             var explodedBulletTexture = Content.Load<Texture2D>("Bullets\\LaserRedShot");
             this.explodedBullet.Texture = explodedBulletTexture;
+
+            this.InitlizeEnemies();
         }
 
         /// <summary>
@@ -93,6 +95,8 @@ namespace SpaceInvaders
                 bullet.Update(gameTime);
             }
 
+            AI.EnemyDispatcher.Current.Update(this.enemies as IEnumerable<Enemy>, gameTime);
+
             base.Update(gameTime);
         }
 
@@ -102,12 +106,12 @@ namespace SpaceInvaders
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);			
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
             this.player.Draw(_spriteBatch);
-            
+
             foreach (var bullet in this.bullets)
             {
                 bullet.Draw(_spriteBatch);
@@ -115,8 +119,39 @@ namespace SpaceInvaders
 
             this.explodedBullet.Draw(_spriteBatch);
 
+            foreach (var enemy in this.enemies)
+            {
+                enemy.Draw(this._spriteBatch);
+            }
+
             _spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+        private void InitlizeEnemies()
+        {
+            this.enemies = new List<Enemy>();
+
+            int currEnemyXPosition = Hud.ScreenWidth / UnitInitialData.EnemiesCount;
+            int currEnemyYPosition = UnitInitialData.EnemyHeight;
+
+            Enemy currEnemy = null;
+            for (int currEnemyIndex = 1; currEnemyIndex <= UnitInitialData.EnemiesCount; currEnemyIndex++)
+            {
+                currEnemy = new Enemy();
+                currEnemy.PositionX = currEnemyXPosition;
+                currEnemy.PositionY = currEnemyYPosition / 5;
+
+                currEnemyXPosition = currEnemyXPosition + UnitInitialData.EnemyWidth;
+                if (currEnemyIndex % (UnitInitialData.EnemiesCount / UnitInitialData.EnemyPacks) == 0)
+                {
+                    currEnemyYPosition = currEnemyYPosition + UnitInitialData.EnemyHeight * 5;
+                    currEnemyXPosition = Hud.ScreenWidth / UnitInitialData.EnemiesCount;
+                }
+
+                currEnemy.Texture = Content.Load<Texture2D>(currEnemy.SpritePath);
+                this.enemies.Add(currEnemy);
+            }
         }
     }
 }

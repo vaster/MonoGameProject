@@ -5,38 +5,24 @@
 
     public class Enemy : GameObject, IMovable
     {
-        public float SpeedX
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
+        public float SpeedX { get; set; }
+        public float SpeedY { get; set; }
 
-        public float SpeedY
+        public Enemy()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
+            this.SpritePath = "PlayerSprite\\PlayerShip";
+            this.Position = new Vector2(this.PositionX, this.PositionY);
         }
 
         public override void Update(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            this.PositionX = this.PositionX + this.SpeedX;
+            this.PositionY = this.PositionY + this.SpeedY;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            throw new System.NotImplementedException();
-        }        
+            spriteBatch.Draw(this.Texture, this.Position, Color.White);
+        }
     }
 }

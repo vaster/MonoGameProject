@@ -84,13 +84,13 @@
         private void CheckPlayerScreenPosition()
         {
             // Checks whether the player has left the screen or not
-            if (this.Position.X > Hub.ScreenWidth)
+            if (this.Position.X > Hud.ScreenWidth)
             {
                 this.PositionX = -this.Width;
             }
             else if (0 > this.Position.X + this.Width)
             {
-                this.PositionX = Hub.ScreenWidth;
+                this.PositionX = Hud.ScreenWidth;
             }
         }
     }

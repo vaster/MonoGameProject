@@ -2,7 +2,7 @@
 {
     using Microsoft.Xna.Framework.Graphics;
 
-    public static class Hub
+    public static class Hud
     {
         public static int ScreenWidth { get; set; }
 
