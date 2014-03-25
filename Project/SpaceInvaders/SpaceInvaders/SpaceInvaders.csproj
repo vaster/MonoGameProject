@@ -139,14 +139,16 @@
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameEngine.cs" />
-    <Compile Include="Hud.cs" />
+    <Compile Include="InitialData\Hud.cs" />
     <Compile Include="ICollidable.cs" />
     <Compile Include="IMovable.cs" />
+    <Compile Include="InitialData\ScreenResolutions.cs" />
+    <Compile Include="InitialData\SpriteData.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ObjectCollisionsControler.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitInitialData.cs" />
+    <Compile Include="InitialData\UnitData.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +162,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Bullets\LaserRedShot.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EnemiesSprites\LargeInvader.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EnemiesSprites\MediumInvader.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EnemiesSprites\SmallInvader.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="SpaceInvaders_TemporaryKey.pfx" />
@@ -184,9 +195,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\EnemiesSprites\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>

@@ -1,10 +1,10 @@
 namespace SpaceInvaders
 {
-    using System;
-    using System.Collections.Generic;
-    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework;  
     using Microsoft.Xna.Framework.Graphics;
-    using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework.Input; 
+    using System;
+    using System.Collections.Generic;         
 
     /// <summary>
     /// This is the main type for your game
@@ -17,6 +17,7 @@ namespace SpaceInvaders
         private IList<Enemy> enemies;
         private Player player = new Player();
         private IList<Bullet> bullets = new List<Bullet>();
+
         // To do: try to make exploded bullet internal of the future class for the collisions
         private ExplodedBullet explodedBullet = new ExplodedBullet();
 
@@ -36,8 +37,8 @@ namespace SpaceInvaders
         {
             // TODO: Add your initialization logic here
             // Initialization of the screen sizes
-            Hud.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
-            Hud.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
+            InitialData.Hud.ScreenHeight = GraphicsDevice.Viewport.Bounds.Height;
+            InitialData.Hud.ScreenWidth = GraphicsDevice.Viewport.Bounds.Width;
 
             // This initialization is not necessary because the player have empty constructor 
             // It's used for setting the start position of the player           
@@ -59,7 +60,7 @@ namespace SpaceInvaders
             this.player.PlayerWeapon.WeaponBullet.Texture = bulletTexture;
 
             // To do: it is only with test purpose
-            var explodedBulletTexture = Content.Load<Texture2D>("Bullets\\LaserRedShot");
+            var explodedBulletTexture = Content.Load<Texture2D>(InitialData.SpriteData.ExplodedBullet);
             this.explodedBullet.Texture = explodedBulletTexture;
 
             this.InitlizeEnemies();
@@ -132,25 +133,44 @@ namespace SpaceInvaders
         {
             this.enemies = new List<Enemy>();
 
-            int currEnemyXPosition = Hud.ScreenWidth / UnitInitialData.EnemiesCount;
-            int currEnemyYPosition = UnitInitialData.EnemyHeight;
+            int currEnemyXPosition = InitialData.Hud.ScreenWidth / InitialData.UnitData.EnemiesCount;
+            int currEnemyYPosition = InitialData.UnitData.EnemyHeight;
 
             Enemy currEnemy = null;
-            for (int currEnemyIndex = 1; currEnemyIndex <= UnitInitialData.EnemiesCount; currEnemyIndex++)
+            // It is used for initialization of the enemies with different sprites
+            int numberOfEnemiesOnRow = InitialData.UnitData.EnemiesCount / InitialData.UnitData.EnemyPacks;
+            for (int currEnemyIndex = 1; currEnemyIndex <= InitialData.UnitData.EnemiesCount; currEnemyIndex++)
             {
-                currEnemy = new Enemy();
+                currEnemy = new Enemy(GetEnemySpritePath((currEnemyIndex - 1) / numberOfEnemiesOnRow),
+                    MathHelper.ToRadians(180));
                 currEnemy.PositionX = currEnemyXPosition;
                 currEnemy.PositionY = currEnemyYPosition / 5;
 
-                currEnemyXPosition = currEnemyXPosition + UnitInitialData.EnemyWidth;
-                if (currEnemyIndex % (UnitInitialData.EnemiesCount / UnitInitialData.EnemyPacks) == 0)
+                currEnemyXPosition = currEnemyXPosition + InitialData.UnitData.EnemyWidth;
+                if (currEnemyIndex % (InitialData.UnitData.EnemiesCount / InitialData.UnitData.EnemyPacks) == 0)
                 {
-                    currEnemyYPosition = currEnemyYPosition + UnitInitialData.EnemyHeight * 5;
-                    currEnemyXPosition = Hud.ScreenWidth / UnitInitialData.EnemiesCount;
+                    currEnemyYPosition = currEnemyYPosition + InitialData.UnitData.EnemyHeight * 5;
+                    currEnemyXPosition = InitialData.Hud.ScreenWidth / InitialData.UnitData.EnemiesCount;
                 }
 
                 currEnemy.Texture = Content.Load<Texture2D>(currEnemy.SpritePath);
                 this.enemies.Add(currEnemy);
+            }
+        }
+
+        private string GetEnemySpritePath(int row)
+        {
+            int rowIndex = row % 3; // Make a row initialization cyclic
+            switch (rowIndex)
+            {
+                case 0:
+                    return InitialData.SpriteData.SmallInvader;
+                case 1:
+                    return InitialData.SpriteData.MediumInvader;
+                case 2:
+                    return InitialData.SpriteData.LargeInvader;
+                default:
+                    return InitialData.SpriteData.DefaultInvader;                    
             }
         }
     }

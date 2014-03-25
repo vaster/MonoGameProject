@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>VASIL-PC</Machine>
-    <WindowsUser>vasko</WindowsUser>
+    <Machine>BARUH</Machine>
+    <WindowsUser>Aleksandar</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <RegisteredManifestChecksum>B5F95756B1CA652ACD10821CA8FB5D543F1AB01D0C1DFBB8573B1D03309FB755</RegisteredManifestChecksum>
@@ -13,20 +13,20 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-17T00:20:04.318</Modified>
+      <Modified>2014-03-25T21:47:19.010</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.exe">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.exe">
       <PackagePath>SpaceInvaders.exe</PackagePath>
-      <Modified>2014-03-17T06:23:49.558</Modified>
+      <Modified>2014-03-25T21:55:25.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.pdb">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\SpaceInvaders.pdb">
       <PackagePath>SpaceInvaders.pdb</PackagePath>
-      <Modified>2014-03-17T06:23:49.529</Modified>
+      <Modified>2014-03-25T21:55:25.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MSBuild\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll">
       <PackagePath>MonoGame.Framework.dll</PackagePath>
@@ -60,53 +60,65 @@
       <PackagePath>SharpDX.XInput.dll</PackagePath>
       <Modified>2012-12-28T16:17:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\PlayerSprite\PlayerShip.xnb">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\PlayerSprite\PlayerShip.xnb">
       <PackagePath>Resources\PlayerSprite\PlayerShip.xnb</PackagePath>
-      <Modified>2014-03-16T22:36:00.359</Modified>
+      <Modified>2014-02-28T22:01:49.663</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\Bullets\LaserRedBullet.xnb">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\Bullets\LaserRedBullet.xnb">
       <PackagePath>Resources\Bullets\LaserRedBullet.xnb</PackagePath>
-      <Modified>2014-03-16T22:36:00.345</Modified>
+      <Modified>2014-03-08T14:06:28.223</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\Bullets\LaserRedShot.xnb">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\Bullets\LaserRedShot.xnb">
       <PackagePath>Resources\Bullets\LaserRedShot.xnb</PackagePath>
-      <Modified>2014-03-16T22:36:00.348</Modified>
+      <Modified>2014-03-16T08:39:35.746</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\EnemiesSprites\LargeInvader.xnb">
+      <PackagePath>Resources\EnemiesSprites\LargeInvader.xnb</PackagePath>
+      <Modified>2014-03-22T12:58:01.552</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\EnemiesSprites\MediumInvader.xnb">
+      <PackagePath>Resources\EnemiesSprites\MediumInvader.xnb</PackagePath>
+      <Modified>2014-03-22T12:58:01.555</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Resources\EnemiesSprites\SmallInvader.xnb">
+      <PackagePath>Resources\EnemiesSprites\SmallInvader.xnb</PackagePath>
+      <Modified>2014-03-22T12:58:01.558</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-16T22:36:00.285</Modified>
+      <Modified>2013-01-06T12:37:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-16T22:36:00.285</Modified>
+      <Modified>2013-01-06T12:37:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-16T22:36:00.286</Modified>
+      <Modified>2013-01-06T12:37:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-16T22:36:00.287</Modified>
+      <Modified>2013-01-06T12:37:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2014-03-16T22:36:00.283</Modified>
+      <Modified>2014-02-27T20:31:10.851</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2014-03-16T22:36:00.300</Modified>
+      <Modified>2013-01-06T12:37:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\GamePage.xaml">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\GamePage.xaml">
       <PackagePath>GamePage.xaml</PackagePath>
-      <Modified>2014-03-16T22:36:00.317</Modified>
+      <Modified>2014-02-27T20:31:10.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-03-17T00:20:04.237</Modified>
+      <Modified>2014-03-22T13:00:49.851</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,15 @@
 ﻿namespace SpaceInvaders
 {
-    using System;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using System;    
 
     public class ExplodedBullet : Bullet
     {
         public ExplodedBullet()
         {
-            this.Height = UnitInitialData.ExplodedBulletHeight;
-            this.Width = UnitInitialData.ExplodedBulletWidth;
+            this.Height = InitialData.UnitData.ExplodedBulletHeight;
+            this.Width = InitialData.UnitData.ExplodedBulletWidth;
         }
 
         public ExplodedBullet(string spritePath, Vector2 position)

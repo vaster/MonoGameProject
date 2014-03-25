@@ -28,6 +28,33 @@
       <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LaserRedShot.xnb</Output>
       <Time>2014-03-16T10:38:48.4196825+02:00</Time>
     </Item>
+    <Item>
+      <Source>SmallInvader.png</Source>
+      <Name>SmallInvader</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\SmallInvader.xnb</Output>
+      <Time>2014-03-22T14:57:07.7435447+02:00</Time>
+    </Item>
+    <Item>
+      <Source>LargeInvader.png</Source>
+      <Name>LargeInvader</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\LargeInvader.xnb</Output>
+      <Time>2014-03-22T14:57:20.7819955+02:00</Time>
+    </Item>
+    <Item>
+      <Source>MediumInvader.png</Source>
+      <Name>MediumInvader</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpritesLoader\SpritesLoader\bin\PSM\Content\MediumInvader.xnb</Output>
+      <Time>2014-03-22T14:57:20.7849953+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4EB305D6-9F40-4838-9F30-A75FC68FAADA}</ContentProjectGUID>

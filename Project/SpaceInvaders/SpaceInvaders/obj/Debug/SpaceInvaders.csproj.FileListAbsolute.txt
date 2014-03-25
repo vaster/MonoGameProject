@@ -142,3 +142,7 @@ F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\
 F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\pri.resfiles
 F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\LanguageQualifiers.txt
 F:\NewVersionTemp\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\ProjectArchitectures.txt
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\obj\Debug\SharpDX\en-us\SharpDX.Properties.Resources.resw
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Resources\EnemiesSprites\LargeInvader.xnb
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Resources\EnemiesSprites\MediumInvader.xnb
+C:\Users\Aleksandar\Documents\GitHub\MonoGameProject\Project\SpaceInvaders\SpaceInvaders\bin\Windows8\Debug\Resources\EnemiesSprites\SmallInvader.xnb

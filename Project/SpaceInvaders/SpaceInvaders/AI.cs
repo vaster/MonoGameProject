@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SpaceInvaders
+﻿namespace SpaceInvaders
 {
+    using Microsoft.Xna.Framework;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;    
+
     public abstract class AI
     {
         public abstract void Update(IEnumerable<GameObject> gameObjects, GameTime gameTimer);
@@ -32,7 +32,6 @@ namespace SpaceInvaders
 
                 if (nextUpdate <= gameTime.TotalGameTime.TotalSeconds)
                 {
-
                     this.Move(this.enemyPacks.ElementAt(lastUpatedPackIndex), gameTime);
                     lastUpatedPackIndex++;
                     nextUpdate = nextUpdate + 1;
@@ -46,15 +45,14 @@ namespace SpaceInvaders
             {
                 bool toMoveDown = false;
 
-                if (enemyPack.Leader.PositionX >= Hud.ScreenWidth - UnitInitialData.EnemyWidth - UnitInitialData.EnemyWidth ||
-                                                                             enemyPack.Leader.PositionX <= UnitInitialData.EnemySpeedX)
+                if (enemyPack.Leader.PositionX >= InitialData.Hud.ScreenWidth - InitialData.UnitData.EnemyWidth - InitialData.UnitData.EnemyWidth ||
+                                                                             enemyPack.Leader.PositionX <= InitialData.UnitData.EnemySpeedX)
                 {
                     toMoveDown = true;
                     if (enemyPack.Direction == Direction.Right)
                     {
                         enemyPack.Direction = Direction.Left;
                         enemyPack.Leader = enemyPack.Enemies.First();
-
                     }
                     else if (enemyPack.Direction == Direction.Left)
                     {
@@ -69,11 +67,11 @@ namespace SpaceInvaders
 
                     if (enemyPack.Direction == Direction.Right)
                     {
-                        enemy.SpeedX = UnitInitialData.EnemySpeedX;
+                        enemy.SpeedX = InitialData.UnitData.EnemySpeedX;
                     }
                     else if (enemyPack.Direction == Direction.Left)
                     {
-                        enemy.SpeedX = -UnitInitialData.EnemySpeedX;
+                        enemy.SpeedX = -InitialData.UnitData.EnemySpeedX;
                     }
 
                     else if (!toMoveDown)
@@ -83,7 +81,7 @@ namespace SpaceInvaders
 
                     if (toMoveDown)
                     {
-                        enemy.SpeedY = UnitInitialData.EnemySpeedY;
+                        enemy.SpeedY = InitialData.UnitData.EnemySpeedY;
                     }
                 }
             }
@@ -98,9 +96,9 @@ namespace SpaceInvaders
             {
                 this.enemyPacks = new List<EnemyPack>();
                 EnemyPack currEnemyPack = null;
-                for (int enemyPackIndex = 0; enemyPackIndex < UnitInitialData.EnemyPacks; enemyPackIndex++)
+                for (int enemyPackIndex = 0; enemyPackIndex < InitialData.UnitData.EnemyPacks; enemyPackIndex++)
                 {
-                    int toTake = UnitInitialData.EnemiesCount / UnitInitialData.EnemyPacks;
+                    int toTake = InitialData.UnitData.EnemiesCount / InitialData.UnitData.EnemyPacks;
                     int toSkip = this.enemyPacks.Count * toTake;
                     currEnemyPack = new EnemyPack(enemies.Skip(toSkip).Take(toTake).ToList());
                     currEnemyPack.CanMove = true;

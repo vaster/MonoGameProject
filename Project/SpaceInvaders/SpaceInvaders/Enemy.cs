@@ -5,13 +5,16 @@
 
     public class Enemy : GameObject, IMovable
     {
+        private const string defaultSpritePath = InitialData.SpriteData.DefaultInvader;
+
         public float SpeedX { get; set; }
         public float SpeedY { get; set; }
 
-        public Enemy()
+        public Enemy(string spritePath = defaultSpritePath, float rotation = 0f)
         {
-            this.SpritePath = "PlayerSprite\\PlayerShip";
+            this.SpritePath = spritePath;
             this.Position = new Vector2(this.PositionX, this.PositionY);
+            this.Rotation = rotation;
         }
 
         public override void Update(GameTime gameTime)
@@ -22,7 +25,8 @@
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Texture, this.Position, Color.White);
+            spriteBatch.Draw(this.Texture, this.Position, null, Color.White, this.Rotation,
+                this.Origin, .5f, SpriteEffects.None, 0f);
         }
     }
 }

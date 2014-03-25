@@ -1,3 +1,6 @@
 Content\PlayerShip.xnb
 Content\LaserRedBullet.xnb
 Content\LaserRedShot.xnb
+Content\SmallInvader.xnb
+Content\LargeInvader.xnb
+Content\MediumInvader.xnb

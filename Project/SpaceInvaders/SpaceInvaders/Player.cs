@@ -1,11 +1,11 @@
 ﻿namespace SpaceInvaders
 {
-    using System;
-    using System.Diagnostics;
-    using System.Threading;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
+    using System;
+    using System.Diagnostics;
+    using System.Threading;    
 
     public class Player : GameObject, IMovable
     {
@@ -20,13 +20,21 @@
         public Player()
         {
             // To do: change the magic numbers with constants
-            this.SpeedX = UnitInitialData.PlayerSpeedX;
-            this.SpeedY = UnitInitialData.PlayerSpeedY;
-            this.Height = UnitInitialData.PlayerHeight;
-            this.Width = UnitInitialData.PlayerWidth;
-            this.Position = new Vector2(UnitInitialData.PlayerPositionX, UnitInitialData.PlayerPositionY);
-            this.SpritePath = "PlayerSprite\\PlayerShip";
-            this.PlayerWeapon = new Weapon(new Bullet("Bullets\\LaserRedBullet", this.Position));
+            this.SpeedX = InitialData.UnitData.PlayerSpeedX;
+            this.SpeedY = InitialData.UnitData.PlayerSpeedY;
+            this.Height = InitialData.UnitData.PlayerHeight;
+            this.Width = InitialData.UnitData.PlayerWidth;
+            this.ScaleX = InitialData.UnitData.PlayerScaleX;
+            this.ScaleY = InitialData.UnitData.PlayerScaleY;
+            this.Position = new Vector2(InitialData.UnitData.PlayerPositionX, InitialData.UnitData.PlayerPositionY);
+            this.SpritePath = InitialData.SpriteData.Player;
+            this.PlayerWeapon = new Weapon(new Bullet(InitialData.SpriteData.Bullet, this.Position));
+        }
+
+        public Player(float rotation) 
+            : this()
+        {
+            this.Rotation = rotation;
         }
 
         public Weapon PlayerWeapon
@@ -39,8 +47,8 @@
         {
             if (this.PlayerWeapon.WeaponBullet.Texture != null && isFireKeyPress)
             {
-                var bulletPosition = new Vector2(this.PositionX + this.Width / 2 - UnitInitialData.BulletWidth / 2,
-                                                this.PositionY - UnitInitialData.BulletHeight / 2);
+                var bulletPosition = new Vector2(this.PositionX + this.Width / 2 - InitialData.UnitData.BulletWidth / 2,
+                                                this.PositionY - InitialData.UnitData.BulletHeight / 2);
                 var bullet = new Bullet(this.PlayerWeapon.WeaponBullet.Texture, bulletPosition);
                 return bullet;
             }
@@ -55,7 +63,7 @@
             this.isFireKeyPress = false;
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && gameTime.TotalGameTime > this.isTimeForFire)
             {
-                this.isTimeForFire = gameTime.TotalGameTime + UnitInitialData.DelayBetweenShotsMillisecond;
+                this.isTimeForFire = gameTime.TotalGameTime + InitialData.UnitData.DelayBetweenShotsMillisecond;
                 this.isFireKeyPress = true;
             }
 
@@ -65,7 +73,7 @@
         
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Texture, this.Position, Color.White);
+            spriteBatch.Draw(this.Texture, this.Position, null, Color.White, 0.0f, this.Origin, this.Scale, SpriteEffects.None, 0);
         }
 
         private void CheckForPressedMoveKey()
@@ -84,13 +92,13 @@
         private void CheckPlayerScreenPosition()
         {
             // Checks whether the player has left the screen or not
-            if (this.Position.X > Hud.ScreenWidth)
+            if (this.Position.X > InitialData.Hud.ScreenWidth)
             {
                 this.PositionX = -this.Width;
             }
             else if (0 > this.Position.X + this.Width)
             {
-                this.PositionX = Hud.ScreenWidth;
+                this.PositionX = InitialData.Hud.ScreenWidth;
             }
         }
     }
